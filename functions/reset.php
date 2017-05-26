@@ -11,6 +11,8 @@ function reset() {
   remove_action('admin_print_styles', 'print_emoji_styles');
   // dns prefetching
   remove_action( 'wp_head', 'wp_resource_hints', 2 );
+  // embeds
+  wp_deregister_script('wp-embed');
 }
 
 add_action('init', 'Functions\reset');
