@@ -1,0 +1,17 @@
+{
+  "name": "wp-starter",
+  "version": "0.0.1",
+  "description": "Starter theme for WordPress",
+  "main": "style.css",
+  "repository": "git@github.com:mz3/wp-starter.git",
+  "author": "Michael Zandstra <michael@tunnel.ninja>",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^4.1.3",
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^4.0.0"
+  },
+  "scripts": {
+    "build:css": "node-sass --source-map true --sourceMapEmbed true src/scss/style.scss | postcss -u autoprefixer | cleancss --source-map -o public/bundle.css"
+  }
+}
