@@ -6,5 +6,6 @@ namespace Functions;
 function enqueue() {
   wp_enqueue_style('style', get_stylesheet_uri());
   wp_enqueue_script('script', get_template_directory_uri().'/script.js', array(), '1.0.0', true);
-  add_action('wp_enqueue_scripts', 'enqueue');
 }
+
+add_action('wp_enqueue_scripts', 'Functions\enqueue');

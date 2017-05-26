@@ -3,7 +3,8 @@
 namespace Functions;
 
 // registers theme menus
-function register() {
+function menus() {
   register_nav_menu('main', 'Main navigation');
-  add_action('init', 'register');
 }
+
+add_action('init', 'Functions\menus');

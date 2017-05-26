@@ -14,3 +14,7 @@ Tags: starter, flexbox, scss, es6
 @import 'reset';
 @import 'variables';
 @import 'mixins';
+
+.btn {
+  @include button;
+}

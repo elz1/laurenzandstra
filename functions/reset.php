@@ -12,3 +12,5 @@ function reset() {
   // dns prefetching
   remove_action( 'wp_head', 'wp_resource_hints', 2 );
 }
+
+add_action('init', 'Functions\reset');
