@@ -1,1 +1,12 @@
-*{margin:0;padding:0}html{-webkit-box-sizing:border-box;box-sizing:border-box}*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit}a{color:inherit;text-decoration:none}iframe,img{max-width:100%}/*# sourceMappingURL=style.css.map */
+/*!
+Theme Name: wp-starter
+Theme URI: http://tunnel.ninja
+Author: Michael Zandstra
+Author URI: http://tunnel.ninja
+Description: Starter theme for WordPress
+Version: 0.0.1
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+Text Domain: wp-starter
+Tags: starter, flexbox, scss, es6
+*/*{margin:0;padding:0}html{-webkit-box-sizing:border-box;box-sizing:border-box}*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit}a{color:inherit;text-decoration:none}iframe,img{max-width:100%}/*# sourceMappingURL=style.css.map */
