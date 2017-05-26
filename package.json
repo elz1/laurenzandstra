@@ -7,11 +7,14 @@
   "author": "Michael Zandstra <michael@tunnel.ninja>",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^7.1.1",
     "clean-css-cli": "^4.1.3",
     "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0",
     "postcss-cli": "^4.0.0"
   },
   "scripts": {
-    "build:css": "node-sass --source-map true --sourceMapEmbed true src/scss/style.scss | postcss -u autoprefixer | cleancss --source-map -o public/bundle.css"
+    "watch:css": "nodemon -e scss --watch scss -x 'npm run build:css'",
+    "build:css": "node-sass --source-map true --sourceMapEmbed true scss/style.scss | postcss -u autoprefixer | cleancss --source-map -o style.css"
   }
 }
