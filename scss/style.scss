@@ -1,8 +1,8 @@
 /*!
 Theme Name: wp-starter
-Theme URI: http://tunnel.ninja
-Author: Michael Zandstra
-Author URI: http://tunnel.ninja
+Theme URI: http://laurenzandstra.com/
+Author: Lauren Zandstra
+Author URI: http://laurenzandstra.com/
 Description: Starter theme for WordPress
 Version: 0.0.1
 License: MIT
@@ -17,4 +17,12 @@ Tags: starter, flexbox, scss, es6
 
 .btn {
   @include button;
+}
+
+.ctn {
+  @include container;
+}
+
+header nav, main {
+  @include container;
 }
