@@ -1,14 +1,11 @@
 <?php
 
-// set namespace
-namespace Functions;
-
 // load helper functions
 require_once(dirname(__FILE__).'/functions/enqueue.php');
 require_once(dirname(__FILE__).'/functions/reset.php');
+require_once(dirname(__FILE__).'/functions/menus.php');
 
-// remove unused features
-reset();
-
-// enqueue theme js and css
-enqueue();
+// run
+Functions\reset();
+Functions\enqueue();
+Functions\register();
