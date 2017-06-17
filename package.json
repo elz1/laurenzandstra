@@ -21,7 +21,7 @@
   "scripts": {
     "watch:css": "nodemon -e scss --watch scss -x 'npm run build:css'",
     "build:css": "node-sass --source-map true --sourceMapEmbed true scss/style.scss | postcss -u autoprefixer | cleancss --source-map -o style.css",
-    "build:js":  "browserify js/script.js -d -t [ babelify --presets [es2015] ] -g uglifyify | exorcist script.js.map > script.js",
+    "build:js": "browserify js/script.js -d -t [ babelify --presets [es2015] ] -g uglifyify | exorcist script.js.map > script.js",
     "watch:js": "nodemon -e js --watch js -x 'npm run build:js'",
     "watch": "npm run watch:js & npm run watch:css"
   }
