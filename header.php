@@ -7,7 +7,5 @@
 <body>
 
 <header>
-  <nav>
-    <?php wp_nav_menu(['theme_location' => 'main']); ?>
-  </nav>
+  <?php \Functions\main_navigation(); ?>
 </header>

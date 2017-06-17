@@ -8,10 +8,25 @@ function register_menus() {
 }
 add_action('init', '\Functions\register_menus');
 
-function add_home_button($items) {
-  $homelink = '<li class="home"><a href="' . home_url( '/' ) . '">' . __('Home') . '</a></li>';
-  // add the home link to the end of the menu
-  $items = $items . $homelink;
-  return $items;
+// output main navigation menu
+function main_navigation() {
+
+  // main navigation
+  $params = [
+    'theme_location' => 'main',
+    'menu_id'        => 'main-navigation',
+    'container'      => false,
+    'echo'           => false
+  ];
+  $nav_menu = wp_nav_menu($params);
+
+  // hamburger toggle
+  $toggle_src = get_template_directory_uri() . '/img/ic_menu_black_24px.svg';
+  $toggle_img = "<img src='$toggle_src' />";
+
+  // entire nav markup
+  $navigation = "<nav>$nav_menu$toggle_img</nav";
+
+  // echo
+  echo $navigation;
 }
-add_filter('wp_nav_menu_main_items', 'add_home_button');

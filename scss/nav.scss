@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'mixins';
+
+nav {
+  ul {
+    list-style-type: none;
+  }
+  #main-navigation {
+    list-style-type: none;
+  }
+}
