@@ -24,5 +24,8 @@
     "build:js": "browserify js/script.js -d -t [ babelify --presets [es2015] ] -g uglifyify | exorcist script.js.map > script.js",
     "watch:js": "nodemon -e js --watch js -x 'npm run build:js'",
     "watch": "npm run watch:js & npm run watch:css"
+  },
+  "dependencies": {
+    "debug": "^2.6.8"
   }
 }

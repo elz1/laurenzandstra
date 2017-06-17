@@ -9,11 +9,21 @@ nav {
 
 nav.main {
   @include row;
+  @include container;
+  position: relative;
   justify-content: space-between;
+  
   .links {
     display: none;
+    @include uncontainer;
+    background: rgba(0,0,0,.1);
   }
   .links.active {
     @include column;
+    position: absolute;
+    top: 100%;
+  }
+  .toggle {
+    cursor: pointer;
   }
 }

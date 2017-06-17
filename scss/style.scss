@@ -20,6 +20,6 @@ Tags: starter, flexbox, scss, es6
   @include button;
 }
 
-header nav, main {
+main {
   @include container;
 }
