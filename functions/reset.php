@@ -15,4 +15,4 @@ function reset() {
   wp_deregister_script('wp-embed');
 }
 
-add_action('init', 'Functions\reset');
+add_action('init', '\Functions\reset');

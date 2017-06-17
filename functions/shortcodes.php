@@ -1,6 +1,6 @@
 <?php
 
-namespace Shortcodes;
+namespace Functions;
 
 function button($props, $content) {
   $attrs = shortcode_atts(
@@ -10,4 +10,4 @@ function button($props, $content) {
   return "<a class='btn' href='".$attrs['href']."'>".$content."</a>";
 }
 
-add_shortcode('button', 'Shortcodes\button');
+add_shortcode('button', '\Functions\button');

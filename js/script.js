@@ -1,3 +1,3 @@
-import setup from './nav';
+import setupNav from './nav';
 
-setup();
+setupNav();

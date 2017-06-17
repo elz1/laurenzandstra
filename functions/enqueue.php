@@ -3,9 +3,9 @@
 namespace Functions;
 
 // adds theme style.css and script.js
-function enqueue() {
+function enqueue_assets() {
   wp_enqueue_style('style', get_stylesheet_uri());
   wp_enqueue_script('script', get_template_directory_uri().'/script.js', array(), '1.0.0', true);
 }
 
-add_action('wp_enqueue_scripts', 'Functions\enqueue');
+add_action('wp_enqueue_scripts', '\Functions\enqueue_assets');
