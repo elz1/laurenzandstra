@@ -14,18 +14,22 @@ function main_navigation() {
   // main navigation
   $params = [
     'theme_location' => 'main',
-    'menu_id'        => 'main-navigation',
+    'menu_class'     => 'links',
     'container'      => false,
     'echo'           => false
   ];
   $nav_menu = wp_nav_menu($params);
 
+  // link to homepage
+  $home_uri = home_url( '/' );
+  $home = "<a href='$home_uri'>HOME</a>";
+
   // hamburger toggle
   $toggle_src = get_template_directory_uri() . '/img/ic_menu_black_24px.svg';
-  $toggle_img = "<img src='$toggle_src' />";
+  $toggle = "<img class ='toggle' src='$toggle_src' />";
 
   // entire nav markup
-  $navigation = "<nav>$nav_menu$toggle_img</nav";
+  $navigation = "<nav class='main'>$home$nav_menu$toggle</nav>";
 
   // echo
   echo $navigation;
