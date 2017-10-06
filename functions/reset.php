@@ -13,6 +13,7 @@ function reset() {
   remove_action( 'wp_head', 'wp_resource_hints', 2 );
   // embeds
   wp_deregister_script('wp-embed');
+  add_theme_support( 'post-thumbnails' );
 }
 
 add_action('init', '\Functions\reset');

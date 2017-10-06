@@ -9,28 +9,44 @@ function register_menus() {
 add_action('init', '\Functions\register_menus');
 
 // output main navigation menu
-function main_navigation() {
+function header_setup() {
 
-  // main navigation
+  
+  $logo = logo_markup();
+  $toggle = toggle_markup();
   $params = [
     'theme_location' => 'main',
-    'menu_class'     => 'links',
+    'menu_class'     => 'menu-items',
     'container'      => false,
-    'echo'           => false
+    'echo'           => false,
+    'menu_id'        => 'menu'
   ];
-  $nav_menu = wp_nav_menu($params);
 
-  // link to homepage
+  
+  $nav = '<div id="menuToggle" class="hamburger toggle">
+                    <input type="checkbox" />'.wp_nav_menu($params) . '
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>';
+  echo $logo;
+  echo "<nav role='navigation' class='main'>$nav</nav>";
+
+}
+
+function logo_markup() {
   $home_uri = home_url( '/' );
-  $home = "<a href='$home_uri'>HOME</a>";
+  $logo_id = get_theme_mod( 'custom_logo' );
+  $logo_src = wp_get_attachment_image_src( $logo_id , 'full' )[0];
+  //$logo = "<img class='logo' src='$logo_src'>";
+  $logo = "<div class='logo'>LZ</div>";
+  return "<a class='logo-link' href='$home_uri'>$logo</a>";
+}
 
-  // hamburger toggle
-  $toggle_src = get_template_directory_uri() . '/img/ic_menu_black_24px.svg';
-  $toggle = "<img class ='toggle' src='$toggle_src' />";
-
-  // entire nav markup
-  $navigation = "<nav class='main'>$home$nav_menu$toggle</nav>";
-
-  // echo
-  echo $navigation;
+function toggle_markup() {
+  return '<div class="hamburger toggle">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>';
 }

@@ -15,11 +15,161 @@ Tags: starter, flexbox, scss, es6
 @import 'variables';
 @import 'mixins';
 @import 'nav';
+@import 'header';
+@import 'footer';
 
 .btn {
   @include button;
 }
 
+h1 {
+  font-size: 24px;
+}
+a {
+  color: $primary;
+  transition: color 300ms;
+  &:hover {
+    color: pink;
+  }
+}
+
 main {
   @include container;
+}
+
+body {
+  font-family: 'Sanchez', serif;
+  font-size: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+.small-container {
+  max-width: 570px;
+  margin: 0 auto;
+  padding-top: 30px;
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+.profile-card {
+  border-bottom: solid 2px #e7ebee;
+  text-align: center;
+  display: flex;
+  padding-bottom: 20px;
+  .profile-card__details {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      margin-left: 50px;
+      justify-content: center;
+  }
+  .profile-card__title {
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  .profile-card__subtitle {
+    color: $gray;
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+  img {
+    max-width: 120px;
+    border-radius: 50%;
+    transition: 1s;
+    &:hover {
+      filter: grayscale(100%);
+    }
+  }
+}
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.home-page__about {
+  margin: 40px 0;
+}
+.icons-list {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    flex-basis: 33.33%;
+    margin: 10px 0;
+    .fa {
+      width: 20px;
+    }
+  }
+}
+
+.links {
+  img {
+    max-height: 30px;
+  }
+}
+.identities {
+  display: flex;
+  margin-top: 30px;
+}
+#ssh {
+  background: #222;
+  color: #fff;
+  padding: 10px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  max-height: 45px;
+  white-space: pre;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  .save {
+    margin-left: 5px;
+    i {
+      color: black;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  .copy {
+    margin-left: 5px;
+    cursor: pointer;
+    i {
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+//projects
+.project-holder {
+  background-color: $lightGray;
+  padding: 20px;
+  text-align: center;
+  img {
+    height: auto;
+  }
+}
+
+.isa_success {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  margin: 10px 0px;
+  padding:12px;
+  display: none;
+  i {
+    margin:10px 22px;
+    font-size:2em;
+    vertical-align:middle;
+  }
 }

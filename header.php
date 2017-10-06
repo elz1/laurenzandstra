@@ -5,7 +5,8 @@
   <?php wp_head(); ?>
 </head>
 <body>
+	<div class="wrapper">
+		<header>
+		  <?php \Functions\header_setup(); ?>
+		</header>
 
-<header>
-  <?php \Functions\main_navigation(); ?>
-</header>

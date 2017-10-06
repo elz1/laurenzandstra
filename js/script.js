@@ -1,3 +1,5 @@
-import setupNav from './nav';
+import copySSH from './copy';
+import selectSSH from './select';
 
-setupNav();
+copySSH();
+selectSSH();
