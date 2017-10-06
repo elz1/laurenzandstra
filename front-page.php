@@ -8,7 +8,7 @@
     <section class="home-page__profile-card">
       <div class="profile-card">
         <div class="profile-card__portrait" title="I'm a web developer, primarily working with WordPress and React, living in St. Louis, MO.">
-          <img src="/wp-content/themes/lz/img/lz.jpg" alt="Lauren Zandstra - Web Developer" />
+          <img src="/wp-content/themes/laurenzandstra/img/lz.jpg" alt="Lauren Zandstra - Web Developer" />
         </div>
         <div class="profile-card__details">
           <h1 class="profile-card__title"><?php the_title(); ?></h1>
